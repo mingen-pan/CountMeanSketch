@@ -44,7 +44,7 @@ def generate_zipf_dataset(a, b, distribution_size, dataset_size, words=None):
 
 def parse_kosark():
     counter = collections.Counter()
-    with open("kosarak_sequences.txt", "r") as f:
+    with open("../kosarak_sequences.txt", "r") as f:
         while True:
             line = f.readline()
             if not line:
