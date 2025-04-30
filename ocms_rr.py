@@ -126,7 +126,7 @@ def build_ocms_rr_optimized_for_l1l2(epsilon, dict_size):
 			CountMeanSketchRandomizedResponseClient(epsilon, dict_size, hash_range))
 
 
-def build_ocms_rr_optimized_for_mse(epsilon, dict_size, f_star=1):
+def build_ocms_rr_optimized_for_worst_case_mse(epsilon, dict_size, f_star=1):
 	"""
 	Build the server and client of CMS+RR optimized for the worst-case MSE
 	:param epsilon: privacy guarantee factor
@@ -157,7 +157,7 @@ if __name__ == "__main__":
 	original_frequencies[50] = 0.2
 	original_frequencies[75] = 0.1
 
-	server, client = build_ocms_rr_optimized_for_mse(epsilon, dict_size)
+	server, client = build_ocms_rr_optimized_for_worst_case_mse(epsilon, dict_size)
 	for original_object in original_objects:
 		perturbed_value, hash_param = client.perturb(original_object)
 		server.receive(perturbed_value, hash_param)
