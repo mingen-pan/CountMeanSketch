@@ -7,13 +7,15 @@ This repo stores the code related to the paper *Improving Count-Mean Sketch as t
 OCMS+RR is the only leading algorithm (so far) for reducing the worst-case MSE and l_1 / l_2 losses when processing datasets with very large dictionaries. A dictionary represents all the possible values of the objects in a dataset.
 
 
-## Code
+## Code Structure
 
 `ocms_rr.py`: contains the server and client implementation of OCMS+RR.
 
 `evaluation`: contains all the codes to reproduce the evaluation section of the paper
 
 `evaluation/sketch_experiment.py`: the entry point of the evaluation code.
+
+`cms_reconstruction_example.py`: The example of Appendix A in the paper.
 
 ## Example
 
